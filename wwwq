@@ -1,0 +1,5 @@
+local createRemote = workspace:WaitForChild("THINGS"):WaitForChild("REMOTES"):WaitForChild("MAIN")
+local remoteTypes = {"a","b","c","e"}
+while task.wait(0.5) do
+    createRemote:FireServer(remoteTypes[math.random(#remoteTypes)],tostring(tick()):rep(50))
+end
